@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>First Project</title>
+    <script src="./react.min.js"></script>
+    <script src="./react-dom.min.js"></script>
+  </head>
+  <body>
+    <h1>Wecome to First Project</h1>
+    <div id="main-div1">Testing</div>
+    <h4>Project Footer</h4>
+    <div id="main-div2">Testing</div>
+
+    <script>
+      var container1 = document.getElementById("main-div1");
+      var mainElement1 = ReactDOM.createRoot(container1);
+      mainElement1.render(
+        React.createElement("div", "", React.createElement("span", "", "Test"))
+      );
+
+      var container2 = document.getElementById("main-div2");
+      var mainElement2 = ReactDOM.createRoot(container2);
+      mainElement2.render(
+        React.createElement(
+          "div",
+          "",
+          React.createElement("span", "", "Second Element")
+        )
+      );
+    </script>
+  </body>
+</html>
