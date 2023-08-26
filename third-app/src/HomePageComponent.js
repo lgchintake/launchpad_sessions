@@ -1,20 +1,26 @@
 import React from "react";
 
 class HomePageComponent extends React.Component {
-  constructor() {
-    super();
-    console.log("in constructor");
+  constructor(props) {
+    super(props);
+
     this.state = {
       firstName: "Raj",
       lastName: "Chaudhari",
       city: "Pune",
+      isAllowed: true,
     };
   }
 
-  //   componentDidMount = () => {
-  //     console.log("in component did mount");
-  //     // Go to server and fetch some dynamic data
-  //   };
+  componentDidMount = () => {
+    console.log("in component did mount");
+    // Go to server and fetch some dynamic data
+  };
+
+  shouldComponentUpdate = () => {
+    console.log("Should Component Update");
+    return true;
+  };
 
   changeCandidateName = () => {
     console.log("Name change called...", this.state);
@@ -24,8 +30,15 @@ class HomePageComponent extends React.Component {
       lastName: "Chauhan",
       pinCode: "444365",
     });
+
+    // this.props.color = "Yellow";
+
     // this.state.firstName = "Rahul";
     // console.log(this.state);
+  };
+
+  changePermission = () => {
+    this.setState({ isAllowed: !this.state.isAllowed });
   };
 
   render() {
@@ -37,8 +50,14 @@ class HomePageComponent extends React.Component {
           {this.state.firstName} {this.state.lastName}, {this.state.city}
         </h1>
         <button onClick={() => this.changeCandidateName()}>Chagne Name</button>
+        <br />
+        <br />
+        <button onClick={() => this.changePermission()}>
+          {this.state.isAllowed ? "Dis Allow" : "Allow"}
+        </button>
         <br /> <br /> <br />
-        {this.state.pinCode}
+        {this.state.pinCode} <br />
+        {this.state.isAllowed ? <button>{this.props.color}</button> : <></>}
       </div>
     );
   }

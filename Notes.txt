@@ -1,0 +1,188 @@
+0x26557d272633CEABfADf2D993C46C859e922C56a
+0x6A3334c47F2821b1D2998726663E4EfB6Bf20175
+
+Goerli --- 	3.459471452532382644 ETH
+After		3.458364405027511635 ETH
+			0.0011070475
+			0.00110704
+
+
+0xa18733d7aDE99187389985554eDF9F586e6C2641
+0xd8b934580fcE35a11B58C6D73aDeE468a2833fa8
+0xd9145CCE52D386f254917e481eB44e9943F39138
+
+
+Python, JavaScript, C++
+
+--------------------- 20-08-2023 --------------------
+
+npm ---- Node Package Manager
+
+
+
+import java.util.*;
+import java.util.List;
+
+
+public int addition(int a, int b){
+	return a+b;
+}
+
+
+
+npm init	
+
+
+----------- 22-08-2023 -------------------
+DOM --->  Document Object Model ====> Memory level representation of your code
+
+
+
+React DOM --> Virtual DOM
+
+
+DIRTY Checking
+
+
+Library ---> You have to call a library to do some functionality
+Framework --> You have to write code in some standards and framework will call your code
+
+
+------------------ 23-08-2023 ------------------------
+
+
+functional programming ---> JavaScript(Angular, React, NextJs), Java
+
+Reactive Programming ---> 
+
+incomplete, complete, fail
+
+
+JavaScipt have three types of variables
+
+
+let, const, var
+
+
+let ---> we can re-assign a value to the variable
+
+ex: let x = 10;
+	x = 20;
+
+const ---> Only once it can be declared and initialized. If re-assign a value will give an error. const variables should be assigned at declaration time only.
+
+ex: const x = 10;
+	x = 20;  X
+
+var ---> Generally, var is used for global declaration. we can re-assign a value easily.
+
+ex: var x  = 10;
+	x = 20;
+
+------------------------- 24-08-2023 --------------------
+
+
+JSX --- JavaScript XML
+
+
+
+
+Import/Export
+
+Members can be exported by adding keyword export
+
+ex: export const x = 10;
+
+
+Max one member can be exported as default
+
+ex: export default y = 20;
+
+
+We can export multiple variables at a time at bottom of the file but those should not already exported
+
+
+ex: const x = 10;
+ const  y = 20;
+
+ export { x, y };
+
+
+We can use aliases at import and export time
+
+ex: const x = 10;
+
+export { x as y};
+
+import y as x from './xyz';
+
+
+We can import all the exported variables from a particular module file
+
+
+ex: abc.js
+
+export x = 10;
+export y = 20;
+export z = 30;
+
+// import in mno
+
+import * as myVars from './abc';
+
+console.log(myVars.x);
+console.log(myVars.y);
+console.log(myVars.z);
+
+
+------------------------- 25-08-2023 --------------------
+
+Compiler: There are two types of compilers are used in react development mode
+
+1) JIT : Just in Time --- Instant compilation before loading into browser
+2) AOT : Ahead of Time -- Compilation of whole code happens when code gets changed into editor
+
+
+
+Two types components
+
+1) Class Component
+2) Functional Component
+
+
+React Class components have some life clycle phases:
+
+1. componentDidMount ---> This method gets called once all component gets rendered into browser dom
+
+
+------------------------------ 26-08-2023 -------------------------
+
+props ==> Properties
+
+Props always provided at caller level. Props are passed when component is called.
+
+Always pass props to parent class by calling super(props) method in component constructor.
+
+Note: Irrespective of props we should call super(props) as first statement in contructor. If they are getting passed by the caller or not.
+
+
+Props are always read only properties. We can't re-assign value of props. We can pass props values to child components.
+
+To show nothing in react, they provided one pseudo tag i.e. <></>
+
+When we do conditional loading of an element then either that element will get loaded in DOM or will totally skipped from DOM
+
+callBackHell
+
+
+
+
+
+
+
+
+
+
+
+
+

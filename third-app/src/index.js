@@ -5,4 +5,4 @@ import "./index.css";
 import HomePageComponent from "./HomePageComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HomePageComponent />);
+root.render(<HomePageComponent isAdminUser={true} color="Red" />);
