@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+import MyButton from "./MyButton";
 
 class HomePageComponent extends React.Component {
   constructor(props) {
@@ -9,16 +11,38 @@ class HomePageComponent extends React.Component {
       lastName: "Chaudhari",
       city: "Pune",
       isAllowed: true,
+      colors: ["Red", "Green", "Blue", "Orange"],
     };
   }
 
   componentDidMount = () => {
-    console.log("in component did mount");
     // Go to server and fetch some dynamic data
+    var products = [];
+    // axios
+    //   .get("https://fakestoreapi.com/products")
+    //   .then(function (response) {
+    //     products = response.data;
+    //     console.log(JSON.stringify(products[5]));
+
+    //     console.log("second call");
+    //     axios
+    //       .get("https://fakestoreapi.com/products/category/jewelery")
+    //       .then(function (response) {
+    //         console.log(response.data);
+    //       })
+    //       .catch(function (error) {
+    //         // handle error
+    //         console.log("Fail: ", error);
+    //       });
+    //   })
+    //   .catch(function (error) {
+    //     // handle error
+    //     console.log("Fail: ", error);
+    //   });
   };
 
   shouldComponentUpdate = () => {
-    console.log("Should Component Update");
+    // console.log("Should Component Update");
     return true;
   };
 
@@ -37,12 +61,29 @@ class HomePageComponent extends React.Component {
     // console.log(this.state);
   };
 
+  test = () => {
+    console.log("test function called");
+  };
+
+  addColors = () => {
+    this.setState({
+      colors: [
+        ...this.state.colors,
+        ...["Yellow", "Pink", "White", "Purple", "Violet"],
+      ],
+    });
+  };
+
   changePermission = () => {
-    this.setState({ isAllowed: !this.state.isAllowed });
+    console.log("Going to update ", this.state);
+    this.setState({ isAllowed: !this.state.isAllowed }, () => {
+      console.log("Just updated! ", this.state);
+      this.test();
+    });
+    console.log("Permission updated! ", this.state);
   };
 
   render() {
-    console.log("in render");
     return (
       <div style={{ margin: "50px" }}>
         <p>Welcome to HomePageComponent</p>
@@ -58,6 +99,17 @@ class HomePageComponent extends React.Component {
         <br /> <br /> <br />
         {this.state.pinCode} <br />
         {this.state.isAllowed ? <button>{this.props.color}</button> : <></>}
+        <br />
+        <br />
+        <MyButton text="First Button" />
+        <MyButton text="Second Button" />
+        {this.state.colors.map((color, index) => (
+          <MyButton key={index} text={color} />
+        ))}
+        <br />
+        <br />
+        <br />
+        <button onClick={() => this.addColors()}>Add Colors</button>
       </div>
     );
   }

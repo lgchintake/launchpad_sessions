@@ -135,7 +135,7 @@ console.log(myVars.y);
 console.log(myVars.z);
 
 
-------------------------- 25-08-2023 --------------------
+------------------------------- 25-08-2023 ----------------------------
 
 Compiler: There are two types of compilers are used in react development mode
 
@@ -173,6 +173,37 @@ To show nothing in react, they provided one pseudo tag i.e. <></>
 When we do conditional loading of an element then either that element will get loaded in DOM or will totally skipped from DOM
 
 callBackHell
+
+----------------------------------- 27-08-2023 ------------------------
+
+JavaScript is asynchronous language. If there is any time require to execute a statement then JavaScript will not wait for that statement and it will go to next statement to execute.
+
+
+ex: 
+
+
+setTimeout(() => {
+  console.log("Delayed for 5 second.");
+}, 5000);
+
+setTimeout(() => {
+  console.log("Delayed for 2 second.");
+}, 2000);
+
+
+Whenever we require same type of code repeatedly on UI then we write that code in single component and we call that component repeatedly.
+
+
+Every individual functionality or element can be treated as a component in react.
+
+
+Note: Whenever we use map function on any array while rendering, we must give key prop to that rendering element. And key prop must be always unique for that element. Index can be used as key prop in any map function but it will be worst choice because while updating state variable there is no gurantee of same existing indexing will be get followed.
+
+
+
+
+
+
 
 
 
