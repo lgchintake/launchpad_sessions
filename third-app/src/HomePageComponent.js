@@ -5,6 +5,7 @@ import MyButton from "./MyButton";
 class HomePageComponent extends React.Component {
   constructor(props) {
     super(props);
+    console.log("In contructor");
 
     this.state = {
       firstName: "Raj",
