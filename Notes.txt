@@ -209,17 +209,55 @@ React Hooks
 
 
 
+------------------------------- 12-09-2023 --------------------------
+
+API --- Application Programming Interface
 
 
+GET ---> When we want to fetch some data from server without changing anything in database
+
+POST --> When we want to create/insert some entity on server(in database)
+
+PUT ---> When we want to update some information or data of an entity
+
+DELETE -> When we want to delete some entity from server
+
+PATCH --> When we want to update some information or data of an entity with limited set of data
+
+OPTIONS --> 
+
+Idempotent --> sending the same request multiple times will produce the same result, without changing the state of the server or the resource.
+
+ex: GET, PUT, DELETE
 
 
+employee --->
+
+empId: 101
+name: xyz
+mobile: 12345
 
 
+PUT:
+
+empId: 101
+name: xyz
+mobile: 56789
 
 
+PATCH:
+
+empId: 101
+mobile: 56789
 
 
+localhost == 127.0.0.1 
 
+middleware ---> It is a kind of code which will work in middle of some functionality
+
+
+JSON.stringify ---> To convert JSON into String format
+JSON.parse ---> To convert String into JSON format
 
 
 

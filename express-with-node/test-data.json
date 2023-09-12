@@ -1,0 +1,14 @@
+[
+  {
+    "empId": 1,
+    "firstName": "Saurabh",
+    "lastName": "Bhosale",
+    "mobile": 12345
+  },
+  {
+    "empId": 2,
+    "firstName": "Anuj",
+    "lastName": "Gadewar",
+    "mobile": 67890
+  }
+]
