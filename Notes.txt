@@ -260,6 +260,49 @@ JSON.stringify ---> To convert JSON into String format
 JSON.parse ---> To convert String into JSON format
 
 
+---------------------------- 13-09-2023 ----------------------------
+Headers --> Headers are nothing but metadata
+
+
+
+Cookie ---> Biscuit
+
+JWT ===> Json Web Token
+
+
+You can send data to server in two formats:
+
+1. URL  --> GET, DELETE
+2. Body --> POST, PUT, PATCH
+
+
+GET ---> http://127.0.0.1:9000/empdetails/105
+
+POST --> http://127.0.0.1:9000/empdetails
+body: {empId: 105}
+
+
+GET:
+
+
+1. Query parameters
+2. PATH parameters
+
+usecase: search employees by first name and last name
+
+1. Query parameters:
+
+http://127.0.0.1:9000/empsearch?firstName=Manasi&lastName=Patil
+http://127.0.0.1:9000/empsearch?lastName=Patil&firstName=Manasi
+
+2. PATH parameters
+
+http://127.0.0.1:9000/empsearch/Manasi/Patil
+
+
+
+
+
 
 
 
