@@ -1,8 +1,8 @@
 import express from "express";
-import { getEmployees } from "../controller/employee.controller";
+import { getEmployees } from "../controller/employee.controller.js";
 
-const employeeRoute = express();
+const employeeRouter = express();
 
-employeeRoute.route("/all-employees").get(getEmployees);
+employeeRouter.route("/all-employees").get(getEmployees);
 
-export default employeeRoute;
+export default employeeRouter;
