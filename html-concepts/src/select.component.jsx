@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 const SelectComponent = () => {
   const [department, setDepartment] = React.useState([]);
+  const departmentList = ["IT", "HR", "Cleaning", "admin"];
+
   const submitDetails = () => {
     console.log(department);
   };
@@ -53,6 +55,21 @@ const SelectComponent = () => {
       Admin <br />
       <br />
       <input type="button" value="submit" onClick={() => submitDetails()} />
+      <br />
+      <br />
+      {departmentList.map((item) => {
+        return (
+          <>
+            <input
+              type="checkbox"
+              name="department"
+              value={item}
+              onChange={(e) => departmentSelection(e)}
+            />
+            {item} <br />
+          </>
+        );
+      })}
     </div>
   );
 };
