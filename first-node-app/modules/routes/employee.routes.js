@@ -1,8 +1,12 @@
 import express from "express";
-import { getEmployees } from "../controller/employee.controller.js";
+import {
+  getEmployees,
+  saveEmployees,
+} from "../controller/employee.controller.js";
 
 const employeeRouter = express();
 
-employeeRouter.route("/all-employees").get(getEmployees);
+employeeRouter.route("/").get(getEmployees);
+employeeRouter.route("/").post(saveEmployees);
 
 export default employeeRouter;

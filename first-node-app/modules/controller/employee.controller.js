@@ -13,3 +13,7 @@ export const getEmployees = async (req, res) => {
     }
   );
 };
+
+export const saveEmployees = (req, res) => {
+  res.end("Hello");
+};
