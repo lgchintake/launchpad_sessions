@@ -316,13 +316,10 @@ Notebook1 ===> emp details
 Notebook2 ===> temp address of employee
 
 
-Launchpad_123
+password: Launchpad_123
 
-mongodb+srv://admin:Launchpad_123@cluster0.jfp2g81.mongodb.net/
-
-
-
-mongodb+srv://admin:Launchpad_123@cluster0.jfp2g81.mongodb.net/?retryWrites=true&w=majority
+3T Studio url: mongodb+srv://admin:Launchpad_123@cluster0.jfp2g81.mongodb.net/
+NodeJS: mongodb+srv://admin:Launchpad_123@cluster0.jfp2g81.mongodb.net/?retryWrites=true&w=majority
 
 
 db.employee.insertOne({
