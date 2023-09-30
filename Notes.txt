@@ -357,6 +357,99 @@ Converting circular structure to JSON ---> This issue occurs when object A is be
 emp ==> address ==> emp
 
 
+------------------------------- 29-09-2023 ---------------------------------
+
+Git 		===> Versioning Control Tool ---> Tortoise SVN
+GitHub 	===> Website/Vendor to version the code
+
+GitLab, BitBucket ......
+
+Project ===> Repository
+
+
+Git Setup
+
+1. Download and install
+2. Add Username and Email as configuration
+3. Generate SSH Key for your machine -- https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+4. Paste your SSH key to GitHub website
+
+
+
+git config --global user.name "<GitHub username>"
+git config --global user.email "<GitHub email>"
+
+
+
+MarkDown --- Scripting language --> Readme.md
+
+
+
+----------------------------- 30-09-2023 ---------------------------------
+
+1. Clone Project/Repository
+
+cmd > git clone <repository URL>
+ex: cmd > git clone https://github.com/lgchintake/test.git
+
+
+2. Check if any changes in the repository
+
+cmd > git status
+
+3. Add all files or folders to the .gitignore file which we don't want to maintain in repository
+
+4. Commit: Number of times we want to save our files or data, we commit to the repository
+
+5. Push: One or more commits together we push to the server
+
+6. Pushing data to the server: add ---> commit ---> push
+	a) Add files to commit.
+		i) add single file
+				cmd > git add <fileName(with path if nested)>
+		ex: cmd > git add first.html
+
+		ii) Add all files
+				cmd > git add .
+	
+	b) Commit your changes.
+				cmd > git commit -m "<Message>"
+		ex: cmd > git commit -m "Added new two files"
+
+	c) Push code to the server.
+		cmd > git push
+
+
+7. See all branches from a repository
+
+cmd > git branch -a
+
+8. See current working branch
+
+cmd > git branch
+
+9. Sync changes from online(github.com --> new branch, delete branch) to offline
+
+cmd > git pull
+
+10. Switch between branches
+
+	cmd > git checkout <branch_name>
+ex cmd > git checkout laxminarayan-branch
+
+11. Pull Request (PR) 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
