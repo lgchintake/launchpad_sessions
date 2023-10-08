@@ -442,9 +442,28 @@ ex cmd > git checkout laxminarayan-branch
 
 
 
+================================================ 08-10-2023 =======================================
+
+Bootstrap grid ==> 12
 
 
+v3 --> xs, sm, md, lg
 
+v5 --> 
+
+12 --> 6/6 ---> 4/4/4 ---> 3/3/3/3 --> 2/2/2/2/2/2 
+
+var ten = '11px';
+
+.first{
+	left-padding: ${ten};
+	......
+}
+
+.second{
+	left-padding: ${ten};
+	......
+}
 
 
 
