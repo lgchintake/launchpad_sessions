@@ -467,9 +467,19 @@ var ten = '11px';
 
 
 
+================================================ 09-10-2023 =======================================
+
+$ ---> jQuery
+
+
+$( "button.continue" ).html( "Next Step..." )
+jQuery( "button.continue" ).html( "Next Step..." )
 
 
 
+
+react --> jQuery --> 3.0
+xyz ----> jQuery --> 2.5
 
 
 
