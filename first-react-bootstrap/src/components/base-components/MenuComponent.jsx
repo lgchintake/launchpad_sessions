@@ -33,7 +33,7 @@ export const MenuComponent = () => {
   ];
 
   return (
-    <div className={clsx((isLarge ? 'col-md-2' : 'col-md-1'), 'menubar')}>
+    <div className={clsx((isLarge ? 'col-sm-2' : 'col-sm-1'), 'menubar')}>
       <ul className="pt-2">
         {menus.map((menu) => {
           return (
@@ -46,7 +46,7 @@ export const MenuComponent = () => {
         })}
       </ul>
       <div className="menu-toggler">
-        <div className="btn btn-success" onClick={()=>setIsLarge(prev=> !prev)}><i class="fa-solid fa-chevron-left"></i></div>
+        <div className="btn btn-success" onClick={()=>setIsLarge(prev=> !prev)}><i className={clsx(isLarge? "fa-solid fa-chevron-left" : "fa-solid fa-chevron-right")}></i></div>
       </div>
     </div>
   );

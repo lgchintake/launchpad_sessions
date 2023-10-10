@@ -1,0 +1,32 @@
+.login-container {
+  margin: 25vh 0 0 0vw;
+  border: 1px solid #272525;
+  border-radius: 5px;
+  .login-logo{
+        width: 100px;
+  }
+}
+
+
+/* sm device */
+@media (min-width: 576px) {
+  .login-container {
+    margin-left: 20vw;
+  }
+}
+
+/* md device */
+@media (min-width: 768px) {
+  .login-container {
+    margin-left: 27vw;
+  }
+}
+
+/* // Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... } */

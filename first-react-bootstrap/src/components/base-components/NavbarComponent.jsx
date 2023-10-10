@@ -3,8 +3,16 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { setLogout } from "../../utils";
+import { useNavigate } from "react-router-dom";
 
 export const NavbarComonent = () => {
+  const navigate = useNavigate();
+  
+  const userLogout = ()=>{
+    setLogout();
+    navigate("/");
+  }
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
@@ -44,7 +52,7 @@ export const NavbarComonent = () => {
 
               <Dropdown.Menu>
                 <Dropdown.Item href="#">Change Password</Dropdown.Item>
-                <Dropdown.Item href="#">Logout</Dropdown.Item>
+                <Dropdown.Item href="#" onClick={()=> userLogout()}>Logout</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Form>

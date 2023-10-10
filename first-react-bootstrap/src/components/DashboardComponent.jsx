@@ -7,7 +7,7 @@ export const DashboardComponent = () => {
       <NavbarComonent />
       <div className="row partation">
         <MenuComponent />
-        <div className="col-md main-area">Dashboard Section</div>
+        <div className="col-sm main-area">Dashboard Section</div>
       </div>
     </>
   );
