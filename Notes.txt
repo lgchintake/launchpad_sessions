@@ -439,7 +439,46 @@ ex cmd > git checkout laxminarayan-branch
 
 11. Pull Request (PR) 
 
+--------------------------- 01-10-2023 -----------------------
 
+
+12. Create branch on local and push it to online repository
+
+	i. Create a new branch in local with new name
+				cmd > git checkout -b <branch_name>
+		ex: cmd > git checkout -b my_branch
+
+	ii. commit code in branch
+
+	iii. Push latest branch and its all commits to GitHub
+
+	cmd > git push --set-upstream origin basic-architecture
+
+
+================== RetailStore ===================
+
+
+1. List of items
+2. Add new Item
+3. Edit item details
+4. Add item category
+5. Edit item category
+6. List of item category
+
+
+<%   %>
+
+
+=========================== 03-10-2023 =======================
+
+Testing Framework: Mocha
+
+Unit Testing: 
+
+
+=========================== 04-10-2023 =======================
+
+Code Coverage: The number of lines tested by your testing code
 
 
 ================================================ 08-10-2023 =======================================

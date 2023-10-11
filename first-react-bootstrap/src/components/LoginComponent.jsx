@@ -2,14 +2,16 @@ import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import "../assets/login.css";
+import "../assets/login.scss";
 import { useEffect, useState } from "react";
 import { loginUser } from "../apis/LoginApis";
 import { ToastContainer } from "react-toastify";
-import { isUserLoggedIn, setUserLogin, showNotification } from "../utils";
+import { showNotification } from "../helpers/utils";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../helpers/LoginContext";
 
 export const LoginComponent = () => {
+  const { isUserLoggedIn, setLoginUser } = useAuth();
   const [loginDetails, setLoginDetails] = useState({
     username: "",
     password: "",
@@ -27,24 +29,18 @@ export const LoginComponent = () => {
       const apiResponse = await loginUser(loginDetails);
       if (apiResponse.status) {
         await showNotification("success", apiResponse.data.message);
-        setTimeout(() => navigate("/dashboard"), 2000);
-        setUserLogin(loginDetails.username);
+        setTimeout(() => setLoginUser(loginDetails.username), 2000);
       } else {
         await showNotification("error", apiResponse.data.message);
       }
     }
   };
-
   useEffect(() => {
-    const checkUserLogin = async () => {
-      const status = await isUserLoggedIn();
-      if (status) {
-        navigate("/dashboard");
-      }
-    };
-    checkUserLogin();
-  }, []);
-
+    if (isUserLoggedIn) {
+      navigate("/dashboard");
+    }
+    // eslint-disable-next-line
+  }, [isUserLoggedIn]);
   return (
     <Container>
       <Row>
@@ -65,6 +61,9 @@ export const LoginComponent = () => {
               type="text"
               placeholder="Username"
               value={loginDetails.username}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") userLogin();
+              }}
               onChange={(e) =>
                 setLoginDetails({
                   username: e.target.value,
@@ -77,6 +76,9 @@ export const LoginComponent = () => {
               type="password"
               placeholder="Password"
               value={loginDetails.password}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") userLogin();
+              }}
               onChange={(e) =>
                 setLoginDetails({
                   username: loginDetails.username,
