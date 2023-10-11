@@ -49,17 +49,3 @@ export const showNotification = async (type, message) => {
       break;
   }
 };
-
-export const setUserLogin = (username) => {
-  localStorage.setItem("username", username);
-  localStorage.setItem("isLogged", true);
-};
-
-export const setLogout = () => {
-  localStorage.clear();
-};
-
-export const isUserLoggedIn = async() => {
-  if (localStorage.getItem("isLogged") === "true") return true;
-  else return false;
-};
