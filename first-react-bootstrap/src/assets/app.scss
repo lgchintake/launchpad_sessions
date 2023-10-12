@@ -1,6 +1,45 @@
 @import url("bootstrap/dist/css/bootstrap.min.css");
 @import url("react-toastify/dist/ReactToastify.css");
 
+// Theme CSS
+.dark {
+  .menubar {
+    background-color: #4d5154;
+    ul {
+      li {
+        border: 1px solid #fff;
+        color: #fff;
+      }
+      li:hover {
+        background-color: #fff;
+        color: #4d5154;
+      }
+    }
+  }
+  // .btn,
+  // .btn-success{
+  //   background-color: #4d5154;
+  //   color: #fff;
+  //   //border: #fff;
+  // }
+  .btn-success{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #4d5154;
+    --bs-btn-border-color: #fff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #4d5154;
+    --bs-btn-hover-border-color: #fff;
+    --bs-btn-focus-shadow-rgb: 60,153,110;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #4d5154;
+    --bs-btn-active-border-color: #4d5154;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #4d5154;
+    --bs-btn-disabled-border-color: #4d5154;
+  }
+}
+
 .user-dropdown {
   .dropdown-toggle::after {
     display: none !important;
@@ -32,6 +71,11 @@
     }
     li:hover {
       background-color: #198754;
+      transition: background-color 400ms linear;
+      -webkit-transition: background-color 400ms linear;
+      -ms-transition: background-color 400ms linear;
+      -o-transition: background-color 400ms linear;
+      -ms-transition: background-color 400ms linear;
       color: #fff;
       cursor: pointer;
     }

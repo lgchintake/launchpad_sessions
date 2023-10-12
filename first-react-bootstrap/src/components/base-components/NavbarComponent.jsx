@@ -15,10 +15,10 @@ export const NavbarComonent = () => {
   const { theme, setAppTheme } = useTheme();
 
   const changeTheme = () => {
-    if (theme === "Light") {
-      setAppTheme("Dark");
+    if (theme === "light") {
+      setAppTheme("dark");
     } else {
-      setAppTheme("Light");
+      setAppTheme("light");
     }
   };
 
@@ -32,7 +32,7 @@ export const NavbarComonent = () => {
   }, [isUserLoggedIn]);
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className={theme === 'light'?'navbar-light bg-light' : 'navbar-dark bg-dark' }>
       <Container fluid>
         <Navbar.Brand href="#home">
           <img
