@@ -521,6 +521,39 @@ react --> jQuery --> 3.0
 xyz ----> jQuery --> 2.5
 
 
+---------------------------------- 18-10-2023 ----------------------------
+
+USER
+id --> mongo(user id)
+firstName
+lastName
+email --> (verification link)
+isEmailVerified
+profileImage --> (aws s3 bucket)
+coverPhoto --->  (aws s3 bucket)
+
+
+NFT
+
+id ---> mongo
+mintedSignatureId
+walletaddress
+userId
+contractaddress
+minStatus
+quantity
+balanceQuantity
+nftDetails --> dimentions, description
+nftCategory --> audio, video, image
+type --> 1155 / 721
+
+
+
+
+
+
+
+
 
 
 
