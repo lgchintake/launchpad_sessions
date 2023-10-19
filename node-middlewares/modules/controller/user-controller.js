@@ -31,6 +31,7 @@ export const userLogin = async (req, res) => {
       firstName: user.firstName,
       lastName: user.lastName,
       userName: user.userName,
+      profile: "admin",
     });
 
     const userLoginDetails = new UserLoginDetailsModel({
