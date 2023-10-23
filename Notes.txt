@@ -549,16 +549,57 @@ type --> 1155 / 721
 
 
 
+---------------------- 21-10-2023 ------------
+
+
+Modules:
+
+1. launchpad_frontend
+2. launchpad_backend
+3. launchpad_admin_panel
+
+
+Story: decide color --> sp -- 1 --- 1 --> 2 SP
+
+1, 2, 3, 4, 5, 6, 7, 8, 9,
+
+Fibonicii series
+
+1, 2, 3, 5, 8, 13
+
+1 sprint -- 14 --> 40 SP ---
+
+5 --> 3 dev --
 
 
 
+------------------------ 2-10-2023 ----------------------------
+
+22 Nov ---> first sem end
+
+1 Jan ---> second sem start ---- April-May 2024
+
+Diwali holidays --> 5 Nov to 20 Nov
+Exam 3 Dec --- 16 Dec
+
+15 + 15 = 30 ===> 1 month
+
+Nov
+Dec
+Jan
+Feb
+
+Approx 90 days availability
+
+1 PI ---> 
+
+express, wintson (logging), mongoose
 
 
 
+anuj -->navbar--> walletconnect
 
-
-
-
+navbar-walletconnect-anuj
 
 
 
