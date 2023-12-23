@@ -11,8 +11,11 @@ function App() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [currentUser, setCurrentUser] = useState("");
   const [winner, setWinner] = useState("");
+  const [loader, setLoader] = useState(false);
+  const [winnerLoader, setWinnerLoader] = useState(false);
 
   const enterToLottery = async () => {
+    setLoader(true);
     const accounts = await web3.eth.getAccounts();
     await lottery.methods
       .enter()
@@ -24,8 +27,12 @@ function App() {
         //console.log(entryResponse);
         setShowSuccess(true);
         setEntryAmount(null);
+        setLoader(false);
       })
-      .catch((entryError) => console.log);
+      .catch((entryError) => {
+        console.log(entryError);
+        setLoader(false);
+      });
   };
 
   const init = async () => {
@@ -38,16 +45,22 @@ function App() {
   };
 
   const pickWinner = async () => {
-    // call a contract and pick a winner
+    setWinnerLoader(true);
     const accounts = await web3.eth.getAccounts();
     await lottery.methods
       .winnerPicker()
-      .send({from: accounts[0]})
-      .then((response) => console.log)
-      .catch((error) => console.log);
-    //setWinner("Laxminarayan");
+      .send({ from: accounts[0] })
+      .then((response) => {
+        console.log(response);
+        setWinner(response.events.selectedWinner.returnValues.luckyWinner);
+        setWinnerLoader(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setWinnerLoader(false);
+      });
   };
-  
+
   useEffect(() => {
     init();
   }, []);
@@ -91,6 +104,11 @@ function App() {
           ></button>
         </div>
       )}
+      {loader && (
+        <div className="alert alert-info" role="alert">
+          Waiting for transaction status...
+        </div>
+      )}
       <button
         type="button"
         className="btn btn-primary"
@@ -123,14 +141,15 @@ function App() {
       {currentUser && manager && currentUser == manager && (
         <div>
           <h3>Manager Activities</h3>
-          <button className="btn btn-secondary" onClick={() => pickWinner()}>
-            Pick a winner
-          </button>
-          <br />
-          <br />
+
+          {winnerLoader && (
+            <div className="alert alert-info" role="alert">
+              Waiting for lucky winner...
+            </div>
+          )}
           {winner && (
             <div className="alert alert-success alert-dismissible" role="alert">
-              Winner : {winner}!
+              Lucky Winner : {winner}!
               <button
                 type="button"
                 className="btn-close"
@@ -140,6 +159,9 @@ function App() {
               ></button>
             </div>
           )}
+          <button className="btn btn-secondary" onClick={() => pickWinner()}>
+            Pick a winner
+          </button>
         </div>
       )}
     </div>

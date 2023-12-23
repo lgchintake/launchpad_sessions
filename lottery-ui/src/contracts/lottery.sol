@@ -23,12 +23,14 @@ contract Lottery {
         return uint(keccak256(abi.encodePacked(block.prevrandao, block.timestamp, players)));
     }
 
-    function winnerPicker() public restricted returns(address){
+    event selectedWinner(address luckyWinner);
+
+    function winnerPicker() public restricted(){
         uint index = random() % players.length;
         address payable payable_address = payable(players[index]);
         payable_address.transfer(address(this).balance);
         players = new address[](0);
-        return payable_address;
+        emit selectedWinner(payable_address);
     }
 
     modifier restricted() {
